@@ -1,0 +1,48 @@
+def roll_f_die():
+    first_die = random.randrange(1,4)
+    return first_die
+
+def roll_s_die():
+    second_die = random.randrange(1,4)
+    return second_die
+
+def roll_t_die():
+    third_die = random.randrange(1,4)
+    return third_die
+
+
+def init_roll():
+    print("BEGIN ROLLING!")
+    roll_count = 0
+    first = roll_f_die()
+    second = roll_s_die()
+    third = roll_t_die()
+    if first == second == third:
+        print ("Roll Count = " + str(roll_count)+ "\n"+ "\n")
+        print ("First = " + str(first))
+        print ("Second = " + str(second))
+        print ("Third = " + str(third)+ "\n"+ "\n")
+    else:
+        roll_count = roll_count + 1
+        print ("First = " + str(first))
+        print ("Second = " + str(second))
+        print ("Third = " + str(third)+ "\n"+ "\n")
+        check_rolls(roll_count)
+
+def check_rolls(roll_count):
+    first = roll_f_die()
+    second = roll_s_die()
+    third = roll_t_die()
+    if first == second == third:
+        print ("Roll Count = " + str(roll_count))
+        print ("First = " + str(first))
+        print ("Second = " + str(second))
+        print ("Third = " + str(third)+ "\n"+ "\n")
+    else:
+        roll_count = roll_count + 1
+        print ("First = " + str(first))
+        print ("Second = " + str(second))
+        print ("Third = " + str(third)+ "\n"+ "\n")
+        check_rolls(roll_count)
+
+init_roll()
